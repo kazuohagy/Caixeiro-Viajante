@@ -16,6 +16,7 @@ public class CaixeiroViajante {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        int[] inseridos = new int[5];
         int[][] mat = new int[5][5];
         mat[0][0] = 0;
         mat[0][1] = 9;
@@ -46,18 +47,66 @@ public class CaixeiroViajante {
         mat[4][2] = 6;
         mat[4][3] = 16;
         mat[4][4] = 0;
-
+        
+        System.out.println("a b c  d  e");
         for (int a = 0; a < mat.length; a++) {
             for (int b = 0; b < mat.length; b++) {
                 System.out.print(mat[a][b] + " ");
             }
-            System.out.println();
+            System.out.println((char) (97 + a));
         }
         System.out.println(mat);
         System.out.println(mario());
+        construir(inseridos, mat);
+        
+        //sudo[1]= true;
+        //System.out.println(sudo[4]);
+
     }
-    public static String mario(){
+
+    public static String mario() {
         return "Ola";
     }
 
+    public static void construir(int[] vet, int[][] mat) {
+        System.out.print("Mario");
+        boolean[] sudo = new boolean[5];
+       System.out.print(vet[1] + " ");
+
+        System.out.println(vet[4]);
+
+        for (int a = 0; a < mat.length; a++) {
+            int valorInicial = Integer.MAX_VALUE;
+            
+            for (int b = 0; b < mat[a].length; b++) {
+                if (mat[a][b] < valorInicial && mat[a][b] != 0&& !busca(mat[a][b],vet)) {
+                   
+                    vet[a] = mat[a][b];
+                    sudo[a] = true;
+                    valorInicial = mat[a][b];
+                }
+            }
+            for (int c = 0; c < vet.length; c++) {
+                System.out.print(vet[a] + " ");
+            }
+            System.out.println(vet.length);
+        }
+
+    }
+    static boolean busca(int x, int [] vetor){
+        for(int i= 0; i< vetor.length;i++){
+            if(vetor[i] == x){
+                return true;
+            }
+        }
+        return false;
+    }
+        static boolean buscainse(int x, boolean [] vetor){
+        for(int i= 0; i< vetor.length;i++){
+            if(vetor[i] == x){
+                return true;
+            }
+        }
+        return false;
+    }
 }
