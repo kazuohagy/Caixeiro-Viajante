@@ -71,7 +71,7 @@ public class CaixeiroViajante {
     public static void construir(int[] vet, int[][] mat) {
         System.out.print("Mario");
         boolean[] sudo = new boolean[5];
-       System.out.print(vet[1] + " ");
+       
 
         System.out.println(vet[4]);
 
@@ -103,9 +103,9 @@ public class CaixeiroViajante {
     }
         static boolean buscainse(int x, boolean [] vetor){
         for(int i= 0; i< vetor.length;i++){
-            if(vetor[i] == x){
-                return true;
-            }
+            //if(vetor[i] == x){
+            //    return true;
+            //}
         }
         return false;
     }
