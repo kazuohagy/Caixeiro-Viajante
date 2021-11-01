@@ -50,7 +50,9 @@ public class CaixeiroViajante {
         matriz[4][4] = 0;
         vet[0] = matriz[0][0];
         int y = 0;
-        int x = 0;
+        //Nesse x do codigo voce pode colocar qualquer numero de 0 a 4
+        //0 é A, 1 é B, 2 é C, 3 é D, 4 é E
+        int x = 3;
         int n = 0;
         int guardaN = x;
         int guarda = 0;
@@ -76,7 +78,7 @@ public class CaixeiroViajante {
 
                 }
                 if (vet[vet.length - 1] != 0) {
-                    vet[vet.length - 1] = matriz[guardaN][0];
+                    vet[vet.length - 1] = matriz[guardaN][x];
                     caminho[caminho.length - 1] = (char) (97);
 
                 }
